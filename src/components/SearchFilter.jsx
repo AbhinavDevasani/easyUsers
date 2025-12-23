@@ -11,8 +11,8 @@ function SearchFilter() {
   };
 
   return (
-    <div className='border'>
-      <input onChange={handleSearch} placeholder='Search by name' className='px-5 py-2'/>
+    <div className='border '>
+      <input onChange={handleSearch} placeholder='Search by name' className='px-5 py-2 outline-none w-[50vw]'/>
     </div>
   )
 }

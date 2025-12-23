@@ -4,7 +4,7 @@ import { FaBuilding } from "react-icons/fa";
 function UserCard({ user }) {
   return (
     <Link to={`/job/${user.id}`} user={user}>
-      <div className=" w-[25vw] h-[40vh] p-6 shadow-lg gap-5 flex flex-col rounded-lg">
+      <div className=" w-[25vw] h-[40vh] p-6 shadow-lg gap-5 flex flex-col rounded-lg hover:scale-105 bg-white">
         <div className="flex mt-2 gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"

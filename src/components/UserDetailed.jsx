@@ -18,9 +18,9 @@ function UserDetailed() {
         navigate("/")
     }
   return (
-    <div>
+    <div className='bg-gray-100'>
         
-    <div className='p-5   gap-5 flex flex-wrap items-strech justify-center'>
+    <div className='p-5   gap-5 flex flex-wrap items-strech justify-center '>
         <div className='bg-white shadow-lg rounded-lg p-6 w-[40%]'>
             <p className='text-[25px] font-[600]'>User Details</p>
             <div className='flex mt-2 gap-2'>
@@ -93,10 +93,13 @@ function UserDetailed() {
                 <p><span className='text-[18px] '>Business</span>: {user.company.bs}</p>
             </div>
         </div>
+        
     </div>
-        <div className='flex mt-2 gap-2 justify-center cursor-pointer ' onClick={()=>goToDash()}>
+        <div className='flex  gap-2 ml-5 justify-center' >
+            <div onClick={()=>goToDash()} className='flex cursor-pointer'>
                 <IoArrowBackSharp className='text-[25px]'/>
                 <p>Back to Dashboard</p>
+            </div>
         </div>
     </div>
   )
