@@ -13,15 +13,19 @@ function App() {
 
   return (
     <>
+    <div className='min-h-screen flex flex-col'>
     {
                 isOpen && <CreateUser setIsOpen={(setIsOpen)}/>
             }
       <Navbar/>
-      <Routes>
-        <Route path='/' element={<Dashboard/>}></Route>
-        <Route path="/job/:id" element={<UserDetailed></UserDetailed>}></Route>
-      </Routes>
+      <main className='flex-grow'>
+        <Routes>
+          <Route path='/' element={<Dashboard/>}></Route>
+          <Route path="/job/:id" element={<UserDetailed></UserDetailed>}></Route>
+        </Routes>
+      </main>
       <Footer/>
+    </div>
     </>
   )
 }

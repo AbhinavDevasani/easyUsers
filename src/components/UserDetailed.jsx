@@ -12,16 +12,16 @@ import { useNavigate } from 'react-router';
 function UserDetailed() {
     const {id}=useParams()
     const navigate=useNavigate()
-    const {users}=useContext(UserContext)
+    const {users,darkMode}=useContext(UserContext)
     const user = users.find((user) => user.id === Number(id));
     function goToDash(){
         navigate("/")
     }
   return (
-    <div className='bg-gray-100'>
+    <div className={`${darkMode ?'bg-gray-100':'bg-[#121212]'}`}>
         
     <div className='p-5   gap-5 flex flex-wrap items-strech justify-center '>
-        <div className='bg-white shadow-lg rounded-lg p-6 w-[40%]'>
+        <div className={`shadow-lg rounded-lg p-6 md:w-[40%] ${darkMode?'':'bg-gray-500'}`}>
             <p className='text-[25px] font-[600]'>User Details</p>
             <div className='flex mt-2 gap-2'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -45,7 +45,7 @@ function UserDetailed() {
                 <p><span className='text-[18px] '>Phone: </span>: {user.phone}</p>
             </div>
         </div>
-        <div className='bg-white shadow-lg rounded-lg p-6 w-[40%]'>
+        <div className={`shadow-lg rounded-lg p-6 md:w-[40%] ${darkMode?'':'bg-gray-500'}`}>
             <p className='text-[25px] font-[600]'>Address & Geo Location</p>
             <div className='flex mt-2 gap-2'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -70,15 +70,15 @@ function UserDetailed() {
                 <p><span className='text-[18px] '>Longitude</span>: {user.address.geo.lng}</p>
             </div>
         </div>
-        <div className='bg-white shadow-lg rounded-lg p-6 w-[40%]'>
+        <div className={`shadow-lg rounded-lg p-6 md:w-[40%] ${darkMode?'':'bg-gray-500'}`}>
             <p className='text-[25px] font-[600]'>Contributions</p>
             <div className='flex mt-2 gap-2'>
                 <TbWorld className='text-[25px]'/>
-                <a href={`${user.website}`} className='text-blue-500'><span className='text-[18px] text-black'>Web Application</span>: {user.website}</a>
+                <a href={`${user.website}`} className='text-blue-500'><span className='text-[18px] text-black'>Web Application:</span> {user.website}</a>
             </div>
             
         </div>
-        <div className='bg-white shadow-lg rounded-lg p-6 w-[40%]'>
+        <div className={`shadow-lg rounded-lg p-6 md:w-[40%] ${darkMode?'':'bg-gray-500'}`}>
             <p className='text-[25px] font-[600]'>Company Details</p>
             <div className='flex mt-2 gap-2'>
                 <FaBuilding className='text-[25px]'/>
@@ -95,7 +95,7 @@ function UserDetailed() {
         </div>
         
     </div>
-        <div className='flex  gap-2 ml-5 justify-center' >
+        <div className={`flex  gap-2 ml-5 justify-center ${darkMode?'text-black':'text-white'}`} >
             <div onClick={()=>goToDash()} className='flex cursor-pointer'>
                 <IoArrowBackSharp className='text-[25px]'/>
                 <p>Back to Dashboard</p>

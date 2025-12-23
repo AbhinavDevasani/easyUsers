@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router";
 import { FaBuilding } from "react-icons/fa";
+import UserContext from "../context/userContext";
+import { useContext } from "react";
 function UserCard({ user }) {
+  const {darkMode}=useContext(UserContext)
   return (
-    <Link to={`/job/${user.id}`} user={user}>
-      <div className=" w-[25vw] h-[40vh] p-6 shadow-lg gap-5 flex flex-col rounded-lg hover:scale-105 bg-white">
+    <Link to={`/job/${user.id}`} user={user} >
+      <div className={` sm:w-[25vw] sm:h-[40vh] p-6 shadow-lg gap-5 flex flex-col rounded-lg sm:hover:scale-105 ${darkMode?'':'bg-gray-500'}`}>
         <div className="flex mt-2 gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +22,7 @@ function UserCard({ user }) {
             />
           </svg>
           <p>
-            <span className="text-[18px] ">Name</span>: {user.name}
+            <span className="sm:text-[18px] ">Name</span>: {user.name}
           </p>
         </div>
         <div className="flex mt-2 gap-2">

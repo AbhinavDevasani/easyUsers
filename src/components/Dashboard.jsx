@@ -5,14 +5,10 @@ import UserCard from './UserCard';
 
 
 function Dashboard() {
-    const {filtered}=useContext(UserContext)
-   
-    
+    const {filtered,darkMode}=useContext(UserContext)
   return (
     <div>
-        
-        
-        <div className='flex flex-wrap gap-5 p-5 justify-center bg-gray-100'>
+        <div className={`flex flex-wrap gap-5 p-5 justify-center ${darkMode?'bg-gray-100':'bg-[#121212]'} `}>
         {
             filtered.map(user=>{
                 return <UserCard key={user.id} user={user}></UserCard>
