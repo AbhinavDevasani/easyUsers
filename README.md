@@ -141,14 +141,6 @@ The app uses React Context for state management:
 - **Mobile:** < 640px
 - **Desktop:** > 768px
 
-## Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## License
-
-This project is open source and available under the MIT License.
-
 ## Screenshots
 ###  Desktop View
 ![Desktop Dashboard](screenshots/desktop-dashboard.png)
