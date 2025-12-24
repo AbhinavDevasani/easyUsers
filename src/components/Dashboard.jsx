@@ -34,17 +34,17 @@ function Dashboard() {
               <button
                 disabled={currentPage === 1}
                 onClick={() => setCurrentPage(currentPage - 1)}
-                className='border-2 p-2 rounded-lg hover:bg-black hover:text-white'
+                className={`border-2 p-2 rounded-lg hover:bg-black hover:text-white ${darkMode?'':'text-white'}`}
               >
                 Prev
               </button>
 
-              <span className="font-bold mt-2">{currentPage}</span>
+              <span className={`font-bold mt-2 ${darkMode?'text-black':'text-white'}`}>{currentPage}</span>
 
               <button
                 disabled={currentPage === totalPages}
                 onClick={() => setCurrentPage(currentPage + 1)}
-                className='border-2 p-2 rounded-lg hover:bg-black hover:text-white'
+                className={`border-2 p-2 rounded-lg hover:bg-black hover:text-white ${darkMode?'':'text-white'}`}
               >
                 Next
               </button>
