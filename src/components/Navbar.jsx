@@ -43,7 +43,7 @@ function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             className={`border-2 p-2 px-5 hover:bg-black hover:text-white rounded-lg w-full md:w-auto ${hamBurger?'hidden':'block'} md:block ${darkMode?'':'text-white'}`}
           >
-            <span className="text-[18px] font-[600]">+</span> Create new user
+            <span className="text-[18px] font-semibold">+</span> Create new user
           </button>
 
           

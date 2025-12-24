@@ -29,7 +29,7 @@ export const UserProvider = ({ children }) => {
       getData()
       
     }
-  }, [])
+  }, [users.length])
 
   useEffect(() => {
   const reSize = () => {

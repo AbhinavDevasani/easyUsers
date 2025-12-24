@@ -23,7 +23,7 @@ function UserDetailed() {
         
     <div className='p-5  gap-5 flex flex-wrap items-strech justify-center '>
         <div className={`shadow-lg rounded-lg p-6 w-full md:w-[40%] ${darkMode?'bg-white':'bg-gray-500'}  hover:scale-105`}>
-            <p className={`text-[25px] font-[600] ${darkMode?'text-black':'text-gray-200'}`}>User Details</p>
+            <p className={`text-[25px] font-semibold ${darkMode?'text-black':'text-gray-200'}`}>User Details</p>
             <div className={`flex mt-2 gap-2 ${darkMode?'text-black':'text-gray-200'}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                     <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
@@ -47,7 +47,7 @@ function UserDetailed() {
             </div>
         </div>
         <div className={`shadow-lg rounded-lg p-6 w-full md:w-[40%] ${darkMode?'bg-white':'bg-gray-500'} hover:scale-105`}>
-            <p className={`text-[25px] font-[600] ${darkMode?'text-black':'text-gray-200'}`}>Address & Geo Location</p>
+            <p className={`text-[25px] font-semibold ${darkMode?'text-black':'text-gray-200'}`}>Address & Geo Location</p>
             <div className={`flex mt-2 gap-2 ${darkMode?'text-black':'text-gray-200'}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                     <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
@@ -72,7 +72,7 @@ function UserDetailed() {
             </div>
         </div>
         <div className={`shadow-lg rounded-lg p-6 w-full md:w-[40%] ${darkMode?'bg-white':'bg-gray-500'} hover:scale-105`}>
-            <p className={`text-[25px] font-[600] ${darkMode?'text-black':'text-gray-200'}`}>Contributions</p>
+            <p className={`text-[25px] font-semibold ${darkMode?'text-black':'text-gray-200'}`}>Contributions</p>
             <div className={`flex mt-2 gap-2 ${darkMode?'text-black':'text-gray-200'}`}>
                 <TbWorld className='text-[25px]'/>
                 <a href={`${user.website}`} className='text-blue-500'><span className={`text-[18px] ${darkMode?'text-black':'text-gray-200'}`}>Web Application:</span> {user.website}</a>
@@ -80,7 +80,7 @@ function UserDetailed() {
             
         </div>
         <div className={`shadow-lg rounded-lg p-6 w-full md:w-[40%] ${darkMode?'bg-white':'bg-gray-500'} hover:scale-105`}>
-            <p className={`text-[25px] font-[600] ${darkMode?'text-black':'text-gray-200'}`}>Company Details</p>
+            <p className={`text-[25px] font-semibold ${darkMode?'text-black':'text-gray-200'}`}>Company Details</p>
             <div className={`flex mt-2 gap-2 ${darkMode?'text-black':'text-gray-200'}`}>
                 <FaBuilding className='text-[25px]'/>
                 <p><span className='text-[18px] '>Company Name</span>: {user.company.name}</p>

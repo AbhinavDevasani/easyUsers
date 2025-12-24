@@ -23,10 +23,10 @@ function Dashboard() {
           {filtered.length===0?
           <div className='flex flex-col items-center min-h-screen justify-center'>
             <img src="https://res.cloudinary.com/dudjdf428/image/upload/v1754130805/Group_7394_fuha3y.png" className='md:w-[35vw] w-[80vw] mt-5'/>
-            <p className='text-[30px] font-[600] text-gray-500'>User Not Found!</p>
+            <p className='text-[30px] font-semibold text-gray-500'>User Not Found!</p>
           </div>
           :<div>
-            <p className={`text-[30px] font-[600] ${darkMode?'':'text-gray-200'}`}>User's Dashboard</p>
+            <p className={`text-[30px] font-semibold ${darkMode?'':'text-gray-200'}`}>User's Dashboard</p>
             <div className={`flex flex-wrap gap-5 p-5 justify-center  `}>
               
             {
