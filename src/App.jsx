@@ -8,6 +8,7 @@ import UserDetailed from './components/UserDetailed'
 import CreateUser from './components/CreateUser'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Home from './components/Home'
 function App() {
  const {isOpen,setIsOpen}=useContext(UserContext)
 
@@ -20,7 +21,8 @@ function App() {
       <Navbar/>
       <main>
         <Routes>
-          <Route path='/' element={<Dashboard/>}></Route>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path='/dashboard' element={<Dashboard/>}></Route>
           <Route path="/job/:id" element={<UserDetailed></UserDetailed>}></Route>
         </Routes>
       </main>

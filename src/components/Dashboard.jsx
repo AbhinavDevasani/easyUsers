@@ -5,7 +5,11 @@ import UserCard from './UserCard';
 
 
 function Dashboard() {
-    const {filtered,darkMode}=useContext(UserContext)
+    const {filtered,darkMode,currentPage,setCurrentPage,usersPage}=useContext(UserContext)
+    const limit=currentPage*usersPage
+    const skip=limit-usersPage
+    const currentUsers=filtered.slice(skip,limit)
+    const totalPages = Math.ceil(filtered.length / usersPage)
   return (
     <div>
 
@@ -20,13 +24,31 @@ function Dashboard() {
             <div className={`flex flex-wrap gap-5 p-5 justify-center  `}>
               
             {
-                filtered.map(user=>{
+                currentUsers.map(user=>{
                     return <UserCard key={user.id} user={user}></UserCard>
                 })
             }
             </div>
           </div>}
-          
+          <div className="flex justify-center gap-3 md:my-6">
+              <button
+                disabled={currentPage === 1}
+                onClick={() => setCurrentPage(currentPage - 1)}
+                className='border-2 p-2 rounded-lg hover:bg-black hover:text-white'
+              >
+                Prev
+              </button>
+
+              <span className="font-bold mt-2">{currentPage}</span>
+
+              <button
+                disabled={currentPage === totalPages}
+                onClick={() => setCurrentPage(currentPage + 1)}
+                className='border-2 p-2 rounded-lg hover:bg-black hover:text-white'
+              >
+                Next
+              </button>
+          </div> 
         </div>
     </div>
   )

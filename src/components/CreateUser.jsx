@@ -86,7 +86,7 @@ const CreateUser = ({ setIsOpen }) => {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded"
+          className="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700"
         >
           Add User
         </button>

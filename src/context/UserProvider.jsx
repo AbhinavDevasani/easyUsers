@@ -4,34 +4,54 @@ import axios from "axios";
 
 export const UserProvider = ({ children }) => {
   const [users, setUsers] = useState(() => {
-    const storedUsers = localStorage.getItem("users");
-    return storedUsers ? JSON.parse(storedUsers) : [];
-  });
+    const storedUsers = localStorage.getItem("users")
+    return storedUsers ? JSON.parse(storedUsers) : []
+  })
   const [isOpen,setIsOpen] = useState(false)
-  const [filtered, setFiltered] = useState(users);
-  const [darkMode, setDarkMode] = useState(true);
+  const [filtered, setFiltered] = useState(users)
+  const [darkMode, setDarkMode] = useState(true)
   const [hamBurger,setHamBurger]=useState(true)
+  const [currentPage, setCurrentPage] = useState(1)
+  const [usersPage,setUsersPage]=useState(0)
   useEffect(() => {
     if (users.length === 0) {
       const getData = async () => {
         const response = await axios.get(
           "https://jsonplaceholder.typicode.com/users"
         );
-        setUsers(response.data);
-        setFiltered(response.data);
-      };
-      getData();
+        setUsers(response.data)
+        setFiltered(response.data)
+      }
+      getData()
     }
-  }, []);
+  }, [])
 
-  
+  useEffect(() => {
+  const reSize = () => {
+    const perPage = window.innerWidth >= 768 ? 6 : 3;
+
+    setUsersPage((prev) => {
+      if (prev !== perPage) {
+        setCurrentPage(1)
+        return perPage
+      }
+      return prev
+    })
+  }
+
+  reSize();
+  window.addEventListener("resize", reSize)
+  return () => window.removeEventListener("resize", reSize)
+}, [])
+
+
   useEffect(() => {
     localStorage.setItem("users", JSON.stringify(users));
-  }, [users]);
-
+  }, [users])
+  
   return (
-    <UserContext.Provider value={{ users, setUsers, filtered, setFiltered,isOpen,setIsOpen,darkMode,setDarkMode,hamBurger,setHamBurger }}>
+    <UserContext.Provider value={{ users, setUsers, filtered, setFiltered,isOpen,setIsOpen,darkMode,setDarkMode,hamBurger,setHamBurger,currentPage,setCurrentPage,usersPage,setUsersPage }}>
       {children}
     </UserContext.Provider>
-  );
-};
+  )
+}

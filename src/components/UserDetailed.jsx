@@ -15,12 +15,13 @@ function UserDetailed() {
     const {users,darkMode}=useContext(UserContext)
     const user = users.find((user) => user.id === Number(id));
     function goToDash(){
-        navigate("/")
+        navigate("/dashboard")
     }
   return (
+    <div>
     <div className={`${darkMode ?'bg-gray-300':'bg-[#121212]'}`}>
         
-    <div className='p-5   gap-5 flex flex-wrap items-strech justify-center '>
+    <div className='p-5  gap-5 flex flex-wrap items-strech justify-center '>
         <div className={`shadow-lg rounded-lg p-6 w-full md:w-[40%] ${darkMode?'bg-white':'bg-gray-500'}`}>
             <p className={`text-[25px] font-[600] ${darkMode?'text-black':'text-gray-200'}`}>User Details</p>
             <div className={`flex mt-2 gap-2 ${darkMode?'text-black':'text-gray-200'}`}>
@@ -95,8 +96,10 @@ function UserDetailed() {
         </div>
         
     </div>
-        <div className={`flex  gap-3 ml-5 justify-center ${darkMode?'text-black':'text-white'}`} >
-            <div onClick={()=>goToDash()} className='flex cursor-pointer border-2'>
+        
+    </div>
+        <div className={`flex p-3 gap-3  justify-center ${darkMode?'text-black bg-gray-300':'text-white bg-[#121212]'}`} >
+            <div onClick={()=>goToDash()} className='flex cursor-pointer border-2 p-2 rounded-lg hover:bg-black hover:text-white'>
                 <IoArrowBackSharp className='text-[25px]'/>
                 <p>Back to Dashboard</p>
             </div>
