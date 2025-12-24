@@ -13,16 +13,21 @@ export const UserProvider = ({ children }) => {
   const [hamBurger,setHamBurger]=useState(true)
   const [currentPage, setCurrentPage] = useState(1)
   const [usersPage,setUsersPage]=useState(0)
+  const [loading,setLoading]=useState(false)
   useEffect(() => {
+    
     if (users.length === 0) {
       const getData = async () => {
+        setLoading(true)
         const response = await axios.get(
           "https://jsonplaceholder.typicode.com/users"
         );
         setUsers(response.data)
         setFiltered(response.data)
+        setLoading(false)
       }
       getData()
+      
     }
   }, [])
 
@@ -50,7 +55,7 @@ export const UserProvider = ({ children }) => {
   }, [users])
   
   return (
-    <UserContext.Provider value={{ users, setUsers, filtered, setFiltered,isOpen,setIsOpen,darkMode,setDarkMode,hamBurger,setHamBurger,currentPage,setCurrentPage,usersPage,setUsersPage }}>
+    <UserContext.Provider value={{ users, setUsers, filtered, setFiltered,isOpen,setIsOpen,darkMode,setDarkMode,hamBurger,setHamBurger,currentPage,setCurrentPage,usersPage,setUsersPage,loading }}>
       {children}
     </UserContext.Provider>
   )

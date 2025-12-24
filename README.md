@@ -4,12 +4,12 @@ A modern, responsive user management dashboard built with React and Vite. Featur
 
 ## Features
 
-- ✨ **User Management** - Create, view, and manage user profiles
-- 🔍 **Search & Filter** - Easily search and filter through users
-- 🌙 **Dark Mode** - Toggle between light and dark themes
-- 📱 **Responsive Design** - Fully mobile-friendly interface
-- 🎨 **Modern UI** - Built with Tailwind CSS for a polished look
-- ⚡ **Fast Performance** - Powered by Vite for instant development
+-  **User Management** - Create, view, and manage user profiles
+-  **Search & Filter** - Easily search and filter through users
+-  **Dark Mode** - Toggle between light and dark themes
+-  **Responsive Design** - Fully mobile-friendly interface
+-  **Modern UI** - Built with Tailwind CSS for a polished look
+-  **Fast Performance** - Powered by Vite for instant development
 
 ## Tech Stack
 
@@ -150,19 +150,19 @@ Feel free to submit issues and enhancement requests!
 This project is open source and available under the MIT License.
 
 ## Screenshots
-### 🖥 Desktop View
+###  Desktop View
 ![Desktop Dashboard](screenshots/desktop-dashboard.png)
 ![Desktop Detailed](screenshots/desktop-detailed.png)
 ![Desktop Home](screenshots/desktop-home.png)
 ![Desktop Create User](screenshots/desktop-createUser.png)
 
-### 📱 Mobile View
+###  Mobile View
 ![Mobile Dashboard](screenshots/mobile-dashboard.png)
 ![Mobile Detailed](screenshots/mobile-detailed.png)
 ![Mobile Home](screenshots/mobile-home.png)
 ![Mobile Create User](screenshots/mobile-createUser.png)
 
-### 🌗 Dark Mode
+###  Dark Mode
 ![Dark Mode Desktop Home](screenshots/darkMode-desktop-home.png)
 ![Dark Mode Desktop Dashboard](screenshots/darkMode-desktop-dashboard.png)
 ![Dark Mode Desktop Detailed](screenshots/darkMode-desktop-detailed.png)

@@ -9,6 +9,7 @@ import CreateUser from './components/CreateUser'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './components/Home'
+import PageNotFound from './components/PageNotFound'
 function App() {
  const {isOpen,setIsOpen}=useContext(UserContext)
 
@@ -22,6 +23,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
+          <Route path="*" element={<PageNotFound/>}></Route>
           <Route path='/dashboard' element={<Dashboard/>}></Route>
           <Route path="/job/:id" element={<UserDetailed></UserDetailed>}></Route>
         </Routes>

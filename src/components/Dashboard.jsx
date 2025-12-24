@@ -5,7 +5,7 @@ import UserCard from './UserCard';
 
 
 function Dashboard() {
-    const {filtered,darkMode,currentPage,setCurrentPage,usersPage}=useContext(UserContext)
+    const {filtered,darkMode,currentPage,setCurrentPage,usersPage,loading}=useContext(UserContext)
     const limit=currentPage*usersPage
     const skip=limit-usersPage
     const currentUsers=filtered.slice(skip,limit)
@@ -13,7 +13,13 @@ function Dashboard() {
   return (
     <div>
 
-      <div className={`${darkMode?'bg-gray-300':'bg-[#121212]'} text-center min-h-screen`}>
+      {
+        loading ? 
+        <div className='h-screen flex items-center justify-center'>
+          <div className="w-8 h-8 border-4 border-gray-300 border-t-black rounded-full animate-spin"></div>
+        </div>
+        :
+        <div className={`${darkMode?'bg-gray-300':'bg-[#121212]'} text-center min-h-screen`}>
           {filtered.length===0?
           <div className='flex flex-col items-center min-h-screen justify-center'>
             <img src="https://res.cloudinary.com/dudjdf428/image/upload/v1754130805/Group_7394_fuha3y.png" className='md:w-[35vw] w-[80vw] mt-5'/>
@@ -50,6 +56,7 @@ function Dashboard() {
               </button>
           </div> 
         </div>
+      }
     </div>
   )
 }
