@@ -150,12 +150,24 @@ Feel free to submit issues and enhancement requests!
 This project is open source and available under the MIT License.
 
 ## Screenshots
+### 🖥 Desktop View
+![Desktop Dashboard](screenshots/desktop-dashboard.png)
+![Desktop Detailed](screenshots/desktop-detailed.png)
+![Desktop Home](screenshots/desktop-home.png)
+![Desktop Create User](screenshots/desktop-createUser.png)
 
-*Add screenshots here:*
-- Dashboard view (light mode)
-- Dashboard view (dark mode)
-- Create user modal
-- Mobile view
-- User detail view
+### 📱 Mobile View
+![Mobile Dashboard](screenshots/mobile-dashboard.png)
+![Mobile Detailed](screenshots/mobile-detailed.png)
+![Mobile Home](screenshots/mobile-home.png)
+![Mobile Create User](screenshots/mobile-createUser.png)
+
+### 🌗 Dark Mode
+![Dark Mode Desktop Home](screenshots/darkMode-desktop-home.png)
+![Dark Mode Desktop Dashboard](screenshots/darkMode-desktop-dashboard.png)
+![Dark Mode Desktop Detailed](screenshots/darkMode-desktop-detailed.png)
+![Dark Mode Mobile Home](screenshots/darkMode-mobile-home.png)
+![Dark Mode Mobile Dashboard](screenshots/darkMode-mobile-dashboard.png)
+![Dark Mode Mobile Detailed](screenshots/darkMode-mobile-detailed.png)
 
 ---
