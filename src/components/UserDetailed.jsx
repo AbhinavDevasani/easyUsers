@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import UserContext from '../context/userContext'
+import UserContext from '../context/UserContext'
 import { useContext } from 'react'
 import { FaMapPin } from "react-icons/fa";
 import { FaBuilding } from "react-icons/fa";

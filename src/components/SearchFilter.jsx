@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
 
-import UserContext from '../context/userContext'
+import UserContext from '../context/UserContext'
 function SearchFilter() {
     const {users,setFiltered,darkMode}=useContext(UserContext)
     

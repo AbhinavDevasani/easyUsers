@@ -1,5 +1,5 @@
 import React from "react";
-import UserContext from "../context/userContext";
+import UserContext from "../context/UserContext";
 import { useContext } from "react";
 import SearchFilter from "./SearchFilter";
 import { IoLogoAppleAr } from "react-icons/io5";

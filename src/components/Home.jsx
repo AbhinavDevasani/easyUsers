@@ -2,7 +2,7 @@ import React from 'react'
 import { IoLogoAppleAr } from "react-icons/io5";
 import { useNavigate } from 'react-router';
 import { useContext } from 'react';
-import UserContext from '../context/userContext';
+import UserContext from '../context/UserContext';
 function Home() {
     const navigate=useNavigate()
     const {darkMode}=useContext(UserContext)

@@ -1,6 +1,6 @@
 
 import './App.css'
-import UserContext from './context/userContext'
+import UserContext from './context/UserContext'
 import { useContext } from 'react'
 import Dashboard from './components/Dashboard'
 import { Routes,Route } from 'react-router'

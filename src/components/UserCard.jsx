@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 import { FaBuilding } from "react-icons/fa";
-import UserContext from "../context/userContext";
+import UserContext from "../context/UserContext";
 import { useContext } from "react";
 function UserCard({ user }) {
   const {darkMode}=useContext(UserContext)
