@@ -18,7 +18,7 @@ function App() {
                 isOpen && <CreateUser setIsOpen={(setIsOpen)}/>
             }
       <Navbar/>
-      <main className='flex-grow'>
+      <main>
         <Routes>
           <Route path='/' element={<Dashboard/>}></Route>
           <Route path="/job/:id" element={<UserDetailed></UserDetailed>}></Route>

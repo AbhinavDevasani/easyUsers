@@ -6,8 +6,8 @@ import { useContext } from "react";
 function UserCard({ user }) {
   const {darkMode}=useContext(UserContext)
   return (
-    <Link to={`/job/${user.id}`} user={user} >
-      <div className={` sm:w-[25vw] sm:h-[40vh] p-6 shadow-lg gap-5 flex flex-col rounded-lg sm:hover:scale-105 ${darkMode?'':'bg-gray-500'}`}>
+    <Link to={`/job/${user.id}`} user={user} className="w-full md:w-[25vw]">
+      <div className={`p-6 shadow-lg gap-5 flex flex-col rounded-lg sm:hover:scale-105 ${darkMode?'bg-white':'bg-gray-500'}`}>
         <div className={`flex mt-2 gap-2 ${darkMode?'':'text-gray-200'}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

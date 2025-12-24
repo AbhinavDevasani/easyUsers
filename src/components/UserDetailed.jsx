@@ -18,10 +18,10 @@ function UserDetailed() {
         navigate("/")
     }
   return (
-    <div className={`${darkMode ?'bg-gray-100':'bg-[#121212]'}`}>
+    <div className={`${darkMode ?'bg-gray-300':'bg-[#121212]'}`}>
         
     <div className='p-5   gap-5 flex flex-wrap items-strech justify-center '>
-        <div className={`shadow-lg rounded-lg p-6 md:w-[40%] ${darkMode?'':'bg-gray-500'}`}>
+        <div className={`shadow-lg rounded-lg p-6 w-full md:w-[40%] ${darkMode?'bg-white':'bg-gray-500'}`}>
             <p className={`text-[25px] font-[600] ${darkMode?'text-black':'text-gray-200'}`}>User Details</p>
             <div className={`flex mt-2 gap-2 ${darkMode?'text-black':'text-gray-200'}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -45,7 +45,7 @@ function UserDetailed() {
                 <p><span className='text-[18px] '>Phone: </span>: {user.phone}</p>
             </div>
         </div>
-        <div className={`shadow-lg rounded-lg p-6 md:w-[40%] ${darkMode?'':'bg-gray-500'}`}>
+        <div className={`shadow-lg rounded-lg p-6 w-full md:w-[40%] ${darkMode?'bg-white':'bg-gray-500'}`}>
             <p className={`text-[25px] font-[600] ${darkMode?'text-black':'text-gray-200'}`}>Address & Geo Location</p>
             <div className={`flex mt-2 gap-2 ${darkMode?'text-black':'text-gray-200'}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -70,7 +70,7 @@ function UserDetailed() {
                 <p><span className='text-[18px] '>Longitude</span>: {user.address.geo.lng}</p>
             </div>
         </div>
-        <div className={`shadow-lg rounded-lg p-6 md:w-[40%] ${darkMode?'':'bg-gray-500'}`}>
+        <div className={`shadow-lg rounded-lg p-6 w-full md:w-[40%] ${darkMode?'bg-white':'bg-gray-500'}`}>
             <p className={`text-[25px] font-[600] ${darkMode?'text-black':'text-gray-200'}`}>Contributions</p>
             <div className={`flex mt-2 gap-2 ${darkMode?'text-black':'text-gray-200'}`}>
                 <TbWorld className='text-[25px]'/>
@@ -78,7 +78,7 @@ function UserDetailed() {
             </div>
             
         </div>
-        <div className={`shadow-lg rounded-lg p-6 md:w-[40%] ${darkMode?'':'bg-gray-500'}`}>
+        <div className={`shadow-lg rounded-lg p-6 w-full md:w-[40%] ${darkMode?'bg-white':'bg-gray-500'}`}>
             <p className={`text-[25px] font-[600] ${darkMode?'text-black':'text-gray-200'}`}>Company Details</p>
             <div className={`flex mt-2 gap-2 ${darkMode?'text-black':'text-gray-200'}`}>
                 <FaBuilding className='text-[25px]'/>
@@ -95,8 +95,8 @@ function UserDetailed() {
         </div>
         
     </div>
-        <div className={`flex  gap-2 ml-5 justify-center ${darkMode?'text-black':'text-white'}`} >
-            <div onClick={()=>goToDash()} className='flex cursor-pointer'>
+        <div className={`flex  gap-3 ml-5 justify-center ${darkMode?'text-black':'text-white'}`} >
+            <div onClick={()=>goToDash()} className='flex cursor-pointer border-2'>
                 <IoArrowBackSharp className='text-[25px]'/>
                 <p>Back to Dashboard</p>
             </div>

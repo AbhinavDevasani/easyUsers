@@ -10,6 +10,7 @@ export const UserProvider = ({ children }) => {
   const [isOpen,setIsOpen] = useState(false)
   const [filtered, setFiltered] = useState(users);
   const [darkMode, setDarkMode] = useState(true);
+  const [hamBurger,setHamBurger]=useState(true)
   useEffect(() => {
     if (users.length === 0) {
       const getData = async () => {
@@ -29,7 +30,7 @@ export const UserProvider = ({ children }) => {
   }, [users]);
 
   return (
-    <UserContext.Provider value={{ users, setUsers, filtered, setFiltered,isOpen,setIsOpen,darkMode,setDarkMode }}>
+    <UserContext.Provider value={{ users, setUsers, filtered, setFiltered,isOpen,setIsOpen,darkMode,setDarkMode,hamBurger,setHamBurger }}>
       {children}
     </UserContext.Provider>
   );
